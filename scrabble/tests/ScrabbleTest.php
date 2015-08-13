@@ -30,6 +30,33 @@
                     //Assert
                     $this->assertEquals(5, $result);
                 }
+
+                function test_scoreScrabble_blankInput()
+                {
+                    //Arrange
+                    $test_Scrabble = new Scrabble;
+                    $input = "";
+
+                    //Act
+                    $result = $test_Scrabble->scoreScrabble($input);
+
+                    //Assert
+                    $this->assertEquals("please enter a word", $result);
+                }
+
+                function test_scoreScrabble_numberInput()
+                {
+                    //Arrange
+                    $test_Scrabble = new Scrabble;
+                    $input = "beg1";
+
+                    //Act
+                    $result = $test_Scrabble->scoreScrabble($input);
+
+                    //Assert
+                    $this->assertEquals("please enter a word", $result); 
+                }
+
         }
 
 ?>
