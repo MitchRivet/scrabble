@@ -24,13 +24,13 @@
                     {
                         $letter_value = $letter_values[$letter];
 
-                    $final_score = $output_score + $letter_value;
-                    var_dump($final_score);
+                    $output_score += $letter_value;
+
                     }
 
                 }
 
-                return $final_score;
+                return $output_score;
 
         }
     }
