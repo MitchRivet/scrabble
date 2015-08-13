@@ -5,10 +5,33 @@
 
         function scoreScrabble($input)
         {
-            if ($input == "a") {
+            $letter_values =
+            array(
+                    "a" => 1,
+                    "i" => 1,
+                    "f" => 4
+            );
 
-                return 1;
-            }
+
+                $array_of_letters = str_split($input);
+
+                $output_score = 0;
+
+                foreach ($array_of_letters as $letter)
+                {
+
+                    if (array_key_exists($letter, $letter_values))
+                    {
+                        $letter_value = $letter_values[$letter];
+
+                    $final_score = $output_score + $letter_value;
+                    var_dump($final_score);
+                    }
+
+                }
+
+                return $final_score;
+
         }
     }
 

@@ -17,6 +17,19 @@
                     //Assert
                     $this->assertEquals(1, $result);
                 }
+
+                function test_scoreScrabble_twoLetter()
+                {
+                    //Arrange
+                    $test_Scrabble = new Scrabble;
+                    $input = "if";
+
+                    //Act
+                    $result = $test_Scrabble->scoreScrabble($input);
+
+                    //Assert
+                    $this->assertEquals(5, $result);
+                }
         }
 
 ?>
